@@ -4,17 +4,18 @@
 
 body {
   margin: 0;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 /* HEADER */
 
 .header {
   background-color: transparent;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   border-radius: 0 0 10px 10px;
   border: solid thistle 1px;
+  margin-bottom: 10px;
 }
 
 .header h2 {
@@ -72,8 +73,6 @@ body {
 }
 
 .presentation {
-  /*   background-color: #cad2c5;
- */
   background-color: transparent;
   border: solid thistle 1px;
   width: 80vw;
@@ -134,7 +133,8 @@ body {
 }
 /* EXPERIENCE */
 
-.experience {
+.experience,
+.study {
   display: inline-block;
   background-color: transparent;
   border: solid thistle 1px;
@@ -147,7 +147,8 @@ body {
   box-shadow: 1px 1px 4px #555b6e;
 }
 
-.experience p {
+.experience p,
+.study p {
   text-align: left;
   color: #555b6e;
   margin-top: 3px;
@@ -156,9 +157,8 @@ body {
   margin: 3px;
 }
 
-.experience div {
-  /*   display: inline-block;
- */
+.experience div,
+.study div {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -166,17 +166,19 @@ body {
 
 .exp__1,
 .exp__2,
-.exp__3 {
+.exp__3,
+.study__1 {
   /*   background-color: #cad2c5;
  */
   padding: 3px;
-  margin: 5px;
+  margin: 6px;
   border-radius: 5px 20px 5px 20px;
   border: solid thistle 1px;
 }
 
 @media (min-width: 40rem) {
-  .experience {
+  .experience,
+  .study {
     display: inline-block;
     width: 28vw;
     height: 350px;
@@ -186,4 +188,62 @@ body {
     width: 100%;
     height: 28%;
   }
+  .study {
+    vertical-align: top;
+    height: 200px;
+  }
+  .study div {
+    width: 100%;
+    height: 60%;
+  }
+}
+
+.courses {
+  display: inline-block;
+  width: 55vw;
+  height: 25vh;
+  margin: 15px 0 10px 25px;
+  padding: 2px 3px 2px 2px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px #555b6e;
+  border: solid thistle 1px;
+  overflow: auto;
+}
+
+.courses p {
+  display: inline-block;
+  padding: 5px 0 0 5px;
+  margin: 3px;
+  color: #555b6e;
+  margin-top: 4px;
+  font-size: small;
+}
+
+.courses__list {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 5px 20px 5px 20px;
+  padding: 5px;
+  border: solid thistle 1px;
+}
+
+.list__items {
+  display: inline-block;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.list__items li {
+  padding: 0 15px 5px 10px;
+  color: #555b6e;
+  font-size: small;
+  width: 100%;
+  list-style: outside;
+}
+
+.courses img {
+  display: inline-block;
+  width: 25px;
+  vertical-align: middle;
 }
