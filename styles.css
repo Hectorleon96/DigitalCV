@@ -199,15 +199,17 @@ body {
 }
 
 .courses {
-  display: inline-block;
-  width: 55vw;
-  height: 25vh;
+  width: 90vw;
+  height: 35vh;
   margin: 15px 0 10px 25px;
   padding: 2px 3px 2px 2px;
   border-radius: 5px;
   box-shadow: 1px 1px 4px #555b6e;
   border: solid thistle 1px;
   overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 10px slategray;
 }
 
 .courses p {
@@ -220,8 +222,6 @@ body {
 }
 
 .courses__list {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 10px;
   border-radius: 5px 20px 5px 20px;
   padding: 5px;
@@ -229,21 +229,38 @@ body {
 }
 
 .list__items {
-  display: inline-block;
   width: 100%;
-  padding-left: 30px;
+  padding-left: 0;
+  text-align: center;
 }
 
 .list__items li {
+  display: inline-block;
   padding: 0 15px 5px 10px;
   color: #555b6e;
   font-size: small;
-  width: 100%;
-  list-style: outside;
+  width: 77vw;
+  list-style: none;
+  background-color: whitesmoke;
 }
 
 .courses img {
   display: inline-block;
-  width: 25px;
+  width: 30px;
+  padding-left: 5px;
+  border: solid whitesmoke 1px;
   vertical-align: middle;
+}
+
+@media (min-width: 40rem) {
+  .courses {
+    display: inline-block;
+    width: 55%;
+    overflow: visible;
+    margin-right: auto;
+    margin-left: 25px;
+  }
+  .list__items li {
+    width: 45vw;
+  }
 }
