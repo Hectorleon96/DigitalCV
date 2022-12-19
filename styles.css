@@ -12,6 +12,7 @@ body {
 
 .header {
   display: inline-block;
+
   width: 100vw;
   text-align: center;
   border-radius: 0 0 10px 10px;
@@ -38,10 +39,19 @@ body {
     border: solid thistle 1px;
   }
   .header h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   .header h5 {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .header h2 {
+    font-size: 3.5rem;
+  }
+  .header h5 {
+    font-size: 1.6rem;
   }
 }
 
@@ -56,7 +66,13 @@ body {
 
 @media (min-width: 40rem) {
   .header a {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .header a {
+    font-size: 1.2rem;
   }
 }
 
@@ -76,16 +92,17 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
-  padding: 5px 6px 5px 5px;
+  padding: 7px 7px 5px 5px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px slategray;
 }
 
 .presentation img {
-  margin-right: 10px;
+  margin: 10px;
   width: 12vw;
   border-radius: 50px 50px 0 50px;
   float: left;
+  vertical-align: top;
 }
 
 .presentation p {
@@ -101,36 +118,29 @@ body {
   width: 80%;
   color: #555b6e;
   background-color: whitesmoke;
+  font-weight: bold;
 }
 
 @media (min-width: 40rem) {
-  .content {
-    text-align: center;
-    margin: 0;
-  }
-
   .presentation {
     display: inline-block;
-    width: 23vw;
-    border-radius: 15px;
-    margin: 10px 10px 5px 5px;
-    overflow: auto;
+    box-shadow: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
   }
   .presentation img {
     float: none;
     border-radius: 100px;
-    width: 20%;
+    margin-right: 15px;
+    width: 30%;
   }
   .presentation p {
     display: inline-block;
-    margin-top: 15px;
     text-align: center;
-    font-size: medium;
+    font-size: 1.1rem;
   }
-}
-
-.presentation strong {
-  color: black;
 }
 
 /* EXPERIENCE */
@@ -138,11 +148,12 @@ body {
 .experience,
 .study {
   display: inline-block;
-  width: 80vw;
+  width: 55vw;
   margin-right: auto;
   margin-left: auto;
   margin-top: 15px;
-  padding: 5px 6px 5px 5px;
+  padding: 5px;
+  margin: 10px 0 10px 0;
   border-radius: 5px;
 }
 
@@ -159,6 +170,7 @@ body {
 .experience > p,
 .study > p {
   background-color: whitesmoke;
+  font-weight: bold;
 }
 
 .experience div,
@@ -182,54 +194,44 @@ body {
 @media (min-width: 40rem) {
   .experience,
   .study {
-    width: 23vw;
-    height: 350px;
     margin: 10px 10px 5px 5px;
+    display: inline-block;
+    width: 30vw;
     vertical-align: top;
+    text-align: center;
+    margin-top: 50px;
   }
-  .experience div,
-  .study div {
-    width: 100%;
-  }
-  .study {
-    height: 200px;
+  .experience p,
+  .study p {
+    font-size: 1rem;
   }
 }
 
 /* SKILLS */
 
 .courses {
-  width: 90vw;
-  margin: 15px 0 0 25px;
-  padding: 2px 3px 2px 2px;
-  border-radius: 5px;
-  overflow: auto;
+  display: inline-block;
+  width: 65vw;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 30px;
   box-shadow: 2px 2px 5px slategray;
 }
 
-.courses p {
-  width: 83vw;
-  padding: 5px 0 0 15px;
-  color: #555b6e;
-  margin-top: 4px;
-  font-size: small;
-}
-
-.courses__list {
-  margin-top: 10px;
-  border-radius: 5px 20px 5px 20px;
-}
-
 .courses__list > p {
+  display: inline-block;
   background-color: whitesmoke;
-  margin-left: 5px;
+  padding: 5px;
+  width: 80%;
+  text-align: left;
+  color: #555b6e;
+  font-size: small;
+  padding: 4px;
+  margin: 4px 4px 4px 0;
 }
 
-.list__items {
-  width: 100%;
-  padding-left: 0;
+.courses__list ul {
   text-align: left;
 }
 
@@ -240,61 +242,51 @@ body {
   font-size: small;
   width: 85%;
   list-style: none;
-  background-color: whitesmoke;
 }
 
 .courses img {
   display: inline-block;
-  width: 8%;
-  /*   padding-left: 5px;
- */
+  width: 11%;
   vertical-align: middle;
 }
 
 @media (min-width: 40rem) {
   .courses {
-    width: 18vw;
+    width: 45vw;
+    margin-top: 50px;
     overflow: visible;
-    text-align: left;
-    padding: 5px;
-  }
-  .courses__list {
-    width: 100%;
+    margin-bottom: 50px;
   }
 
-  .courses__list > p {
-    width: 100%;
-    margin: 0;
+  .courses__list p {
+    font-size: 0.9rem;
+    width: 30vw;
   }
-
-  .list__items li {
+  .list__items li,
+  .list__items img {
     text-align: center;
-    width: 90%;
-  }
-  .courses img {
-    width: 7%;
+    font-size: 1rem;
+    padding-top: 5px;
   }
 }
 
 hr {
-  margin-top: 20px;
-  width: 62%;
+  margin-top: 25px;
+  width: 60vw;
 }
 
 .footer-main {
   display: inline-block;
   width: 100vw;
   text-align: center;
-}
-
-.footer__box {
-  width: 60vw;
-  margin-left: auto;
-  margin-right: auto;
-  color: #555b6e;
+  border-radius: 10px 10px 0 0;
+  background-color: salmon;
 }
 
 .footer__box p {
   word-spacing: 2px;
-  font-size: small;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: white;
 }
